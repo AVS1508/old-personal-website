@@ -6,10 +6,10 @@ class Introduction extends React.Component {
   componentDidMount() {
     this.typed_options = {
       strings: [
-        "Software Engineer",
-        "Web Developer",
+        "Software Developer @ BUILD UMass",
+        "Rising Junior @ UMass Amherst",
+        "Full-Stack Web Developer",
         "Graphic Designer",
-        "Rising Junior @ UMass",
       ],
       typeSpeed: 40,
       backSpeed: 40,

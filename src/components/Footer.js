@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithubSquare,
@@ -60,11 +60,11 @@ class Footer extends React.Component {
   render() {
     const smallViewArray = this.state.isMobileView
       ? ["", "", "", "", "", ""]
-      : ["Github", "Behance", "LinkedIn", "Facebook", "Instagram", "Youtube"];
+      : ["Email", "Phone", "Github", "Behance", "LinkedIn", "Facebook", "Instagram", "Youtube"];
     return (
       <Navbar
         style={{
-          backgroundColor: "#222222",
+          background: "linear-gradient(45deg, rgba(17, 35, 50, 1) 0%, rgba(7, 37, 62, 1) 100%)",
           position: "sticky",
           bottom: 0,
           zIndex: 2000,
@@ -73,25 +73,22 @@ class Footer extends React.Component {
       >
         <Nav className="mx-auto">
           <Nav.Link href="https://github.com/AVS1508" target="_blank">
-            <FontAwesomeIcon icon={faGithubSquare} /> {smallViewArray[0]}
+            <FontAwesomeIcon icon={faGithubSquare} /> {smallViewArray[2]}
           </Nav.Link>
           <Nav.Link href="https://www.behance.net/AVS1508" target="_blank">
-            <FontAwesomeIcon icon={faBehanceSquare} /> {smallViewArray[1]}
+            <FontAwesomeIcon icon={faBehanceSquare} /> {smallViewArray[3]}
           </Nav.Link>
           <Nav.Link href="https://www.linkedin.com/in/avs1508" target="_blank">
-            <FontAwesomeIcon icon={faLinkedin} /> {smallViewArray[2]}
+            <FontAwesomeIcon icon={faLinkedin} /> {smallViewArray[4]}
           </Nav.Link>
           <Nav.Link href="https://www.facebook.com/AVS1508" target="_blank">
-            <FontAwesomeIcon icon={faFacebookSquare} /> {smallViewArray[3]}
+            <FontAwesomeIcon icon={faFacebookSquare} /> {smallViewArray[5]}
           </Nav.Link>
           <Nav.Link href="https://www.instagram.com/adityavs_/" target="_blank">
-            <FontAwesomeIcon icon={faInstagram} /> {smallViewArray[4]}
+            <FontAwesomeIcon icon={faInstagram} /> {smallViewArray[6]}
           </Nav.Link>
-          <Nav.Link
-            href="https://www.youtube.com/channel/UCOrl4Ba4pJBDUHzDvX4GFiQ"
-            target="_blank"
-          >
-            <FontAwesomeIcon icon={faYoutube} /> {smallViewArray[5]}
+          <Nav.Link href="https://www.youtube.com/channel/UCOrl4Ba4pJBDUHzDvX4GFiQ" target="_blank">
+            <FontAwesomeIcon icon={faYoutube} /> {smallViewArray[7]}
           </Nav.Link>
         </Nav>
       </Navbar>

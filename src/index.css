@@ -1,5 +1,5 @@
 #root {
-  background-color: #fff;
+  background-color: #222222;
   font-family: "Inter";
   font-weight: 500;
   font-size: 18px;
@@ -139,10 +139,10 @@ sm {
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  color: black;
+  color: #eeeeee;
 }
 .primary .flip-card-front {
-  background-color: #eeeeee;
+  background-color: #222222;
   box-shadow: 2px 2px 5px 2px #222222;
 }
 
@@ -154,9 +154,10 @@ sm {
   align-items: center;
   border-radius: 0.5rem;
   transform: rotateY(180deg);
+  color: #eeeeee;
 }
 .primary .flip-card-back {
-  background-color: #eeeeee;
+  background-color: #222222;
   box-shadow: 2px 2px 5px 2px #222222;
 }
 
@@ -168,7 +169,7 @@ sm {
 }
 
 .primary t {
-  color: #222222;
+  color: #eeeeee;
   font-weight: 700;
 }
 
@@ -180,4 +181,12 @@ sm {
 
 .primary more {
   color: #616669;
+}
+
+.title-bar {
+  background-color: #222222;
+  color: white;
+  padding: 5%;
+  margin: 0;
+  width: 100vw;
 }

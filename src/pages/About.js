@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import EducationCard from "../components/EducationCard";
+import TitleBar from "../components/TitleBar";
+
 import ProfessionalHeadshot from "../assets/professional-me.jpg";
 import UMassLogo from "../assets/umass-logo.jpg";
 import DPSRKPLogo from "../assets/dpsrkp-logo.jpg";
@@ -9,14 +11,15 @@ import DPSRKPLogo from "../assets/dpsrkp-logo.jpg";
 class About extends React.Component {
   render() {
     return (
-      <div className="primary center-structure">
-        <Container fluid>
-          <Row className="justify-content-md-center" style={{ alignItems: "center" }}>
-            <Col lg="3" style={{ textAlign: "center" }}>
+      <div className="primary center-structure" style={{ display: "flex", flexDirection: "column" }}>
+        <TitleBar title="About Me" />
+        <Container fluid style={{ padding: "2.5em" }}>
+          <Row className="justify-content-center" style={{ alignItems: "center" }}>
+            <Col lg="4" style={{ textAlign: "center" }}>
               <img className="header-img" src={ProfessionalHeadshot} alt="header" fluid />
             </Col>
             <Col lg="8">
-              <p id="about" style={{ padding: "25px 10px", textAlign: "justify" }}>
+              <p id="about" style={{ padding: "25px 10px", textAlign: "justify", color: "#eeeeee", margin: "0w" }}>
                 I am a rising junior at the University of Massachusetts Amherst, double majoring in Computer Science and
                 Mathematics with a concentration in Statistics and Data Science. Currently, I'm involved as a Software
                 Developer for BUILD UMass, where I use my software engineering skills for pro-bono app/web development
@@ -26,6 +29,8 @@ class About extends React.Component {
               </p>
             </Col>
           </Row>
+        </Container>
+        <Container>
           <Row>
             <EducationCard
               image={UMassLogo}

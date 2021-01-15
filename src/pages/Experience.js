@@ -2,31 +2,75 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import ExperienceCard from "../components/ExperienceCard";
-import ProfessionalHeadshot from "../assets/professional-me.jpg";
+import TitleBar from "../components/TitleBar";
+
 import UMassLogo from "../assets/umass-logo.jpg";
 import DPSRKPLogo from "../assets/dpsrkp-logo.jpg";
+import TEDxRKPLogo from "../assets/tedxyouth-logo.jpg";
+import BUILDLogo from "../assets/build-logo.jpg";
+import AerossLogo from "../assets/aeross-logo.jpg";
+import VirtuBoxLogo from "../assets/virtubox-logo.jpg";
 
 class Experience extends React.Component {
   render() {
     return (
-      <div className="primary center-structure">
+      <div className="primary center-structure" style={{ display: "flex", flexDirection: "column" }}>
+        <TitleBar title="My Experiences" />
         <Container fluid>
-          <Row className="justify-content-md-center" style={{ alignItems: "center" }}>
-            <Col lg="3" style={{ textAlign: "center" }}>
-              <img className="header-img" src={ProfessionalHeadshot} alt="header" fluid />
-            </Col>
-            <Col lg="8">
-              <p id="about" style={{ padding: "25px 10px", textAlign: "justify" }}>
-                I am a rising junior at the University of Massachusetts Amherst, double majoring in Computer Science and
-                Mathematics with a concentration in Statistics and Data Science. Currently, I'm involved as a Software
-                Developer for BUILD UMass, where I use my software engineering skills for pro-bono app/web development
-                and tech consulting for the Amherst community. I also serve as a Designer for the HackUMass Organizing
-                Team, responsible for graphics design and production for the annual hackathon. I'm actively searching
-                for Software Engineering and/or Web Development internships for Summer 2021!
-              </p>
-            </Col>
-          </Row>
           <Row>
+            <ExperienceCard
+              image={BUILDLogo}
+              title="Software Developer"
+              organization="BUILD UMass"
+              address="Amherst, MA, USA"
+              alternateTitle="Software Developer, BUILD UMass"
+              duration="September 2020 - Present"
+              details={
+                <>
+                  • Developing a modern website for UMass Entrepreneurship Club
+                  <br />
+                  • Part of 4-member development team responsible for the same
+                  <br />
+                  • Engineering front-end with React, SCSS, and Bootstrap
+                </>
+              }
+            />
+            <ExperienceCard
+              image={VirtuBoxLogo}
+              title="Business Development Associate"
+              organization="VirtuBox Infotech Pvt. Ltd."
+              address="Noida, India"
+              alternateTitle="Business Development, VirtuBox Infotech"
+              duration="July 2020 - August 2020"
+              details={
+                <>
+                  • Planned the transition from Vue.js to React framework for web CMS
+                  <br />
+                  • Worked on competitor analysis and app-store search optimization
+                  <br />
+                  • Produced 10+ video tutorials about the company’s CMS dashboard
+                </>
+              }
+            />
+            <ExperienceCard
+              image={UMassLogo}
+              title="Computer Science Peer Tutor"
+              organization="College of Information and Computer Science"
+              address="Amherst, MA, USA"
+              alternateTitle="CS Peer Tutor, UMass CICS"
+              duration="January 2020 - May 2020"
+              details={
+                <>
+                  • Held one-on-one tutoring sessions for two introductory CS courses
+                  <br />
+                  • Conducted weekly meetings to discuss assignments and homework
+                  <br />
+                  • Explained various implementations of essential data structures
+                </>
+              }
+            />
+            {/*</Row>
+          <Row>*/}
             <ExperienceCard
               image={DPSRKPLogo}
               title="President"
@@ -46,38 +90,38 @@ class Experience extends React.Component {
               }
             />
             <ExperienceCard
-              image={DPSRKPLogo}
+              image={TEDxRKPLogo}
               title="Lead Designer"
               organization="TEDxYouth@DPSRKPuram"
               address="R. K. Puram, New Delhi, India"
               alternateTitle="Lead Designer, TEDxYouth@DPSRKPuram"
-              duration="April 2018 - April 2019"
+              duration="November 2018 - April 2019"
               details={
                 <>
-                  • Oversaw student discipline and adherence to code of conduct
+                  • Led the organization's design initiative for annual event
                   <br />
-                  • Represented the students’ interests in administrative meetings
+                  • Created posters, banners, & prospectus for November event
                   <br />
-                  • Liaised between students, faculty, and administration
-                  <br />• Supervised the student-run events in lieu of school coordinator
+                  • Designed ID cards & certificates for speakers and volunteers
+                  <br />
+                  • Coordinated with other departments of the Organizing Committee
                 </>
               }
             />
             <ExperienceCard
-              image={DPSRKPLogo}
-              title="President"
-              organization="Student Council, Delhi Public School"
+              image={AerossLogo}
+              title="Honorary Advisor"
+              organization="Aerospace Society, Delhi Public School"
               address="R. K. Puram, New Delhi, India"
-              alternateTitle="President, Student Council"
-              duration="April 2018 - April 2019"
+              alternateTitle="Honorary Advisor, Aerospace Society"
+              duration="May 2018 - April 2019"
               details={
                 <>
-                  • Oversaw student discipline and adherence to code of conduct
+                  • Mentored junior teams for aerospace competitions and summits
                   <br />
-                  • Represented the students’ interests in administrative meetings
+                  • Took part in promoting space exploration and colonization to peers
                   <br />
-                  • Liaised between students, faculty, and administration
-                  <br />• Supervised the student-run events in lieu of school coordinator
+                  • Advised the executive team regarding new focuses for the club
                 </>
               }
             />
